@@ -12,8 +12,7 @@ app.use(
 app.use(express.json());
 
 const ai = new GoogleGenAI({
-  apiKey:
-    process.env.GEMINI_API_KEY || "AIzaSyAo_G2vTyRMPKuOPXRHKiNPi7-TVgA4AAg",
+  apiKey: process.env.GEMINI_API_KEY,
 });
 
 app.post("/api/chat", async (req, res) => {
